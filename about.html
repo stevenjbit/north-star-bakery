@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - North Star Bakery</title>
+    <title>Products - North Star Bakery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>About North Star Bakery</h1>
+        <h1>Our Handmade Products</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,19 +19,31 @@
         </nav>
     </header>
     <main>
-        <h2>Our Story & Philosophy</h2>
-        <p>We started North Star Bakery to bring our neighborhood together over handmade, locally sourced ingredients.</p>
+        <!-- NEW: Favorites Display Container -->
+        <div id="favorites-section" style="background-color: #FAFAFA; padding: 15px; border: 1px solid #5C4033; margin-bottom: 20px;">
+            <h3>My Favorites List</h3>
+            <ul id="favorites-list">
+                <!-- JavaScript will dynamically add list items here -->
+            </ul>
+        </div>
+
+        <h2>Breads, Pastries, and Cakes</h2>
+        <p>Explore our wide selection of baked goods. Prices range from $3 for individual pastries to $30 for custom cakes.</p>
         
-        <img src="bakery-storefront.jpg" alt="The welcoming exterior of North Star Bakery with a glowing open sign">
+        <div class="product">
+            <img src="bakery-bread.jpg" alt="A basket filled with various freshly baked crusty breads">
+            <br>
+            <!-- NEW: Add to Favorites Button -->
+            <button onclick="addToFavorites('Assorted Crusty Breads')">Add to Favorites</button>
+        </div>
  
-        <h2>Behind the Scenes</h2>
-        <video controls>
-            <source src="bakery-behind-scenes.mp4" type="video/mp4">
-            Your browser does not support the video tag. Please upgrade your browser to view our behind-the-scenes bakery tour.
-        </video>
+        <figure class="product">
+            <img src="bakery-signature-loaf.jpg" alt="Our signature sourdough loaf with an intricate scored pattern on top">
+            <figcaption>Our Signature Sourdough Loaf, baked fresh every morning.</figcaption>
+            <!-- NEW: Add to Favorites Button -->
+            <button onclick="addToFavorites('Signature Sourdough Loaf')">Add to Favorites</button>
+        </figure>
     </main>
     <footer>
         <p>&copy; 2026 North Star Bakery</p>
     </footer>
-</body>
-</html>
